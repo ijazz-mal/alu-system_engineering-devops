@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# Connects to a server using a private key with single-character ssh flags
-
-ssh -i ~/.ssh/school 20827505fc20@20827505fc20.c66578f8.alu-cod.online
+# Connects to a server using a private key
+ssh -i ~/.ssh/school ubuntu@8.8.8.8
