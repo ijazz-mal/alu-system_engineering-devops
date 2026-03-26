@@ -11,14 +11,14 @@ sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
 # Configure HAProxy frontend and backend
 sudo tee -a /etc/haproxy/haproxy.cfg > /dev/null <<EOF
 
-frontend 7025_frontend
+frontend 7065_frontend
     bind *:80
-    default_backend 7025_backend
+    default_backend 7065_backend
 
 backend 7025_backend
     balance roundrobin
-    server 7025-web-01 44.203.48.14:80 check
-    server 7025-web-02 44.203.119.237:80 check
+    server 7025-web-01 3.89.217.35:80 check
+    server 7025-web-02 52.207.234.49:80 check
 EOF
 
 sudo service haproxy restart
