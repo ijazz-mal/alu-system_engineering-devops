@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get -y install haproxy
 
 # Enable HAProxy to be managed via init script
-sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
+sudo sed -i "s/ENABLED=0/ENABLED=1/" /etc/default/haproxy
 
 # Configure HAProxy frontend and backend
 sudo tee -a /etc/haproxy/haproxy.cfg > /dev/null <<EOF
